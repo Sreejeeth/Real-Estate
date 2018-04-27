@@ -48,13 +48,19 @@ if __name__== "__main__":
 			    print("Please enter data: ")
 			    line = input("\n")
 			    word_list.append(line + "|")
+
 			word_list.append("\n")
 			text_file.writelines(word_list)
+<<<<<<< HEAD
+=======
+			word_list = []
+>>>>>>> cefdd25251e75a20c19d1bd70848878ce3ee3de7
 			text_file.close()
 
 		elif(choice=="2"):
 			print("Searching...")
 			index_text_file("estatedetails.txt", "index2.txt")
+<<<<<<< HEAD
 
 			# print("Enter the Name of the estate to be searched")
 			# searchParam = input("\n")
@@ -65,15 +71,21 @@ if __name__== "__main__":
 			# 		print(estates)
 			# search_file.close()
 
+=======
+>>>>>>> cefdd25251e75a20c19d1bd70848878ce3ee3de7
 			print("Do you wish to modify??\n Press Y or N Please...")
 			ch=input()
-			if ch=='Y':
-				print("enter the modified estate details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
+			if ch=='Y' or 'y':
+				print("Enter the modified estate details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
 				for i in range (1, 7):
 				    print("Please enter data: ")
 				    line = input("\n")
 				    word_list.append(line + "|")
+<<<<<<< HEAD
 
+=======
+				searchParam = word_list
+>>>>>>> cefdd25251e75a20c19d1bd70848878ce3ee3de7
 				modify_file = open("estatedetails.txt","r")
 				searchParam.replace(searchParam,modify_file.writelines(word_list))
 				modify_file.close()
