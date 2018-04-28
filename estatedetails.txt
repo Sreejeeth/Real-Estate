@@ -1,6 +1,15 @@
-name1|add1|size1|price1|owner1|cond1|
-name2|add2|size2|price2|owner2|cond2|
-heritage|yelahanka|asaad|asd|asd|asd|
-ppp|pp|p|p|p|p|
-yyyy|y|u|i|oyt|e|
-aaaa|a|a|a|a|a|
+
+N G Nilaya|16th cross ,Malleshwaram,Bangalore -3|1700|8000000|Mr Ramesh|Sale|
+Heritage Estate|17th cross ,Yeshwantpur , Bangalore-4|1600|7000000|Mr Nagesh|Resale|
+NCC urban|puttenhalli, yelahanka ,bangalore-7|1800|10000000|Mr Yogesh|Sale|
+
+N G Nilaya|16th cross ,Malleshwaram,Bangalore -3|1700|8000000|Mr Ramesh|Sale|
+Heritage Estate|17th cross ,Yeshwantpur , Bangalore-4|1600|7000000|Mr Nagesh|Resale|
+NCC urban|puttenhalli, yelahanka ,bangalore-7|1800|10000000|Mr Yogesh|Sale|
+Name1|Add1|Size1|Price1|Owner1|Condition1|
+1|1|1|1|1|1|
+2|2|2|2|2|2|
+3|3|3|3|3|3|
+4|4|4|4|4|4|
+wqws|r|r|r|r|r|
+sae|dd|ddf|ds|ss|fcs|

@@ -3,9 +3,9 @@ import sys
 import os
 import string
 
-
-def main():
-    index_text_file("estatedetails.txt", "index2.txt")
+#
+# txt_fil="estatedetails.txt"
+# idx_fil= "index2.txt"
 
 def index_text_file(txt_filename, idx_filename,
     delimiter_chars=",.;:!?/|"):
@@ -21,7 +21,7 @@ def index_text_file(txt_filename, idx_filename,
         words = lin.split('|')
         #words.split("|")
         words2.append(words[0])
-        print(words[0])
+        # print(words[0])
     # # Create the index file.
     idx_fil = open(idx_filename, "w")
     for word in sorted(words2):
@@ -32,19 +32,26 @@ def index_text_file(txt_filename, idx_filename,
 
 
     print("Enter the estate name")
-    estateName= input()
+    estateName= raw_input()
     idx_fil = open(idx_filename, "r")
     txt_fil = open(txt_filename, "r")
-
+    print("The details are :")
+    count=0
     for word in sorted(words2):
         if word == estateName:
             for lin in txt_fil:
                 words = lin.split('|')
                 if estateName==words[0]:
-                    print(words)
+                    for details in words:
+                        print(details)
                     break;
+        else:
+            count=count+1
 
-
+    if count==len(sorted(words2)) :
+        print("not found")
+    txt_fil.close()
+    idx_fil.close()
 
 if __name__ == "__main__":
     main()
