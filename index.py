@@ -15,17 +15,17 @@ class estateDetails:
 
 	def getdata( self):
 		print("Enter the estate name")
-		estateName= input()
+		estateName= raw_input()
 		print("Enter the estate address")
-		estateAddress = input()
+		estateAddress = raw_input()
 		print("Enter the estate size")
-		estateSize = input()
+		estateSize = raw_input()
 		print("Enter the estate price")
-		estatePrice =input()
+		estatePrice =raw_input()
 		print("Enter the estate owner")
-		estateOwner = input()
+		estateOwner = raw_input()
 		print("Enter the estate condition")
-		estateCondition = input()
+		estateCondition = raw_input()
 
 	def putdata(self ):
 		#st="the details are %s mm %s m %s m %s n %s m %s" %(self.estateName+self.estateAddress+self.estateSize+self.estatePrice+self.estateOwner+self.estateCondition)
@@ -40,30 +40,29 @@ if __name__== "__main__":
 	print("\nENTER YOUR CHOICE")
 	while(1):
 		print("\n 1-ADD AN ESTATE DETAIL \n 2-SEARCH FOR AN ESTATE\n 3-VISUALISE THE ESTATES\n 4-EXIT THE PORTAL")
-		choice= input()
+		choice= raw_input()
 		if(choice=="1"):
 			print("enter the following details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
 			text_file= open("estatedetails.txt","a")
 			for i in range (1, 7):
 			    print("Please enter data: ")
-			    line = input("\n")
+			    line = raw_input("\n")
 			    word_list.append(line + "|")
 
 			word_list.append("\n")
 			text_file.writelines(word_list)
-<<<<<<< HEAD
-=======
+
 			word_list = []
->>>>>>> cefdd25251e75a20c19d1bd70848878ce3ee3de7
+
 			text_file.close()
 
 		elif(choice=="2"):
 			print("Searching...")
 			index_text_file("estatedetails.txt", "index2.txt")
-<<<<<<< HEAD
+
 
 			# print("Enter the Name of the estate to be searched")
-			# searchParam = input("\n")
+			# searchParam = raw_input("\n")
 			# search_file = open("estatedetails.txt","r")
 			# for estates in search_file:
 			# 	if searchParam in estates:
@@ -71,31 +70,29 @@ if __name__== "__main__":
 			# 		print(estates)
 			# search_file.close()
 
-=======
->>>>>>> cefdd25251e75a20c19d1bd70848878ce3ee3de7
+
 			print("Do you wish to modify??\n Press Y or N Please...")
-			ch=input()
+			ch=raw_input()
 			if ch=='Y' or 'y':
 				print("Enter the modified estate details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
 				for i in range (1, 7):
 				    print("Please enter data: ")
-				    line = input("\n")
+				    line = raw_input("\n")
 				    word_list.append(line + "|")
-<<<<<<< HEAD
 
-=======
 				searchParam = word_list
->>>>>>> cefdd25251e75a20c19d1bd70848878ce3ee3de7
 				modify_file = open("estatedetails.txt","r")
 				searchParam.replace(searchParam,modify_file.writelines(word_list))
 				modify_file.close()
 
 		elif(choice=="3"):
-			print("Visualising...")
+			os.system('python mixvisualize.py')
 
 		elif(choice=="4"):
 			exit()
 
+		else :
+			print("Invalid Input")
 
 
   #estateObj.getdata()
