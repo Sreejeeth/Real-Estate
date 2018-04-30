@@ -15,17 +15,17 @@ class estateDetails:
 
 	def getdata( self):
 		print("Enter the estate name")
-		estateName= raw_input()
+		estateName= input()
 		print("Enter the estate address")
-		estateAddress = raw_input()
+		estateAddress = input()
 		print("Enter the estate size")
-		estateSize = raw_input()
+		estateSize = input()
 		print("Enter the estate price")
-		estatePrice =raw_input()
+		estatePrice =input()
 		print("Enter the estate owner")
-		estateOwner = raw_input()
+		estateOwner = input()
 		print("Enter the estate condition")
-		estateCondition = raw_input()
+		estateCondition = input()
 
 	def putdata(self ):
 		#st="the details are %s mm %s m %s m %s n %s m %s" %(self.estateName+self.estateAddress+self.estateSize+self.estatePrice+self.estateOwner+self.estateCondition)
@@ -40,13 +40,13 @@ if __name__== "__main__":
 	print("\nENTER YOUR CHOICE")
 	while(1):
 		print("\n 1-ADD AN ESTATE DETAIL \n 2-SEARCH FOR AN ESTATE\n 3-VISUALISE THE ESTATES\n 4-EXIT THE PORTAL")
-		choice= raw_input()
+		choice= input()
 		if(choice=="1"):
-			print("enter the following details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
+			print("enter the following details\nestateName\nestateAreaName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
 			text_file= open("estatedetails.txt","a")
-			for i in range (1, 7):
+			for i in range (1, 8):
 			    print("Please enter data: ")
-			    line = raw_input("\n")
+			    line = input("\n")
 			    word_list.append(line + "|")
 
 			word_list.append("\n")
@@ -62,7 +62,7 @@ if __name__== "__main__":
 
 
 			# print("Enter the Name of the estate to be searched")
-			# searchParam = raw_input("\n")
+			# searchParam = input("\n")
 			# search_file = open("estatedetails.txt","r")
 			# for estates in search_file:
 			# 	if searchParam in estates:
@@ -72,12 +72,12 @@ if __name__== "__main__":
 
 
 			print("Do you wish to modify??\n Press Y or N Please...")
-			ch=raw_input()
+			ch=input()
 			if ch=='Y' or 'y':
 				print("Enter the modified estate details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
 				for i in range (1, 7):
 				    print("Please enter data: ")
-				    line = raw_input("\n")
+				    line = input("\n")
 				    word_list.append(line + "|")
 
 				searchParam = word_list

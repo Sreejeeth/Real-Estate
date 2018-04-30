@@ -13,7 +13,7 @@ data3=pd.read_csv("houseShortage.csv")
 while(1):
 	print("Choose the parameters to visualize\n")
 	print(" 1-Bedrooms vs count based on current geo location\n 2-Price vs Latitude based on current geo location \n 3-Price vs Square Feet \n 4-Bedroom vs price based on current geo location\n 5-Price vs location( Based on postal code)\n 6-Know your scheme based on Gov. of India \n 7-State vs Estimated number of households in India\n 8-Housing 2012 (India)\n key board interrupt-exit\n")
-	vch=raw_input("enter the choice")
+	vch=input("enter the choice")
 	if(vch=="1"):
 		data['bedrooms'].value_counts().plot(kind='bar')
 		plt.title('number of Bedroom')
@@ -48,14 +48,14 @@ while(1):
 		plt.show()
 
 	elif(vch=="6"):
-		plt.scatter(data2.Started_in,data2.Name_of_the_Scheme)	
+		plt.scatter(data2.Started_in,data2.Name_of_the_Scheme)
 		plt.title("Housing schemes in India")
 		plt.show()
-	elif(vch=="7"):	
+	elif(vch=="7"):
 		N = data3.Name_State.count()
 		print(N)
-		ind = np.arange(N) 
-		width = 0.22     
+		ind = np.arange(N)
+		width = 0.22
 		plt.bar(ind, data3.Estimated_households_BPL_Urban, width, label='Houses below poverty line')
 		plt.bar(ind + width,data3.Number_Katcha_households, width,
 		    label=' katcha houses')
@@ -79,8 +79,7 @@ while(1):
 		ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 		plt.title("Housing 2012")
 		plt.show()
-				
+
 
 	else:
-		exit()	
-
+		exit()

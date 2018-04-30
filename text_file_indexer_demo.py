@@ -32,7 +32,7 @@ def index_text_file(txt_filename, idx_filename,
 
 
     print("Enter the estate name")
-    estateName= raw_input()
+    estateName= input()
     idx_fil = open(idx_filename, "r")
     txt_fil = open(txt_filename, "r")
     print("The details are :")
