@@ -61,29 +61,7 @@ if __name__== "__main__":
 			index_text_file("estatedetails.txt", "index2.txt")
 
 
-			# print("Enter the Name of the estate to be searched")
-			# searchParam = input("\n")
-			# search_file = open("estatedetails.txt","r")
-			# for estates in search_file:
-			# 	if searchParam in estates:
-			# 		print("Estate Found!!!")
-			# 		print(estates)
-			# search_file.close()
 
-
-			print("Do you wish to modify??\n Press Y or N Please...")
-			ch=input()
-			if ch=='Y' or 'y':
-				print("Enter the modified estate details\nestateName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
-				for i in range (1, 7):
-				    print("Please enter data: ")
-				    line = input("\n")
-				    word_list.append(line + "|")
-
-				searchParam = word_list
-				modify_file = open("estatedetails.txt","r")
-				searchParam.replace(searchParam,modify_file.writelines(word_list))
-				modify_file.close()
 
 		elif(choice=="3"):
 			os.system('python mixvisualize.py')
@@ -93,7 +71,3 @@ if __name__== "__main__":
 
 		else :
 			print("Invalid Input")
-
-
-  #estateObj.getdata()
-  #estateObj.putdata()

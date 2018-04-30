@@ -50,48 +50,9 @@ def index_text_file(txt_filename, idx_filename,
 
     if count==len(sorted(words2)) :
         print("not found")
-        return
     txt_fil.close()
     idx_fil.close()
 
-
-    print("Do you wish to modify??\n Press Y or N Please...")
-    ch=input()
-    if ch=='Y' or ch=='y':
-        with open(txt_filename) as f:
-            with open("estatedetailsdup.txt", "w") as f1:
-                for line in f:
-                    f1.write(line)
-        f.close()
-        f1.close()
-        f1 = open("estatedetailsdup.txt", "r")
-
-        txt_fil=open(txt_filename,"w").close();
-        # f1=open(txt_filename,"r+")
-        txt_fil=open(txt_filename,"w")
-               #probs
-        for lin in f1:
-            words = lin.split('|')
-                # for line in f1:
-                #     words_again = line.split('|')
-            if estateName!=words[0]:
-                txt_fil.write(lin)
-            # else:
-            #     for line in f1:
-            #         words_again = line.split('|')
-            #         if words_again!=words:
-            #             txt_fil.write(line)
-            #
-        word_list=list()
-        print("enter the following details\nestateName\nestateAreaName\nestateAddress\nestateSize\nestatePrice\nestateOwner\nestateCondition\n")
-        text_file= open("estatedetails.txt","a")
-        for i in range (1, 8):
-            print("Please enter data: ")
-            line = input("\n")
-            word_list.append(line + "|")
-
-        word_list.append("\n")
-        txt_fil.writelines(word_list)
 if __name__ == "__main__":
     main()
 
