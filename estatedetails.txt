@@ -1,3 +1,0 @@
-Herita|Jalahalli|1002,Herita,Dobbalapur|1500|9000000|Ross|Rent|
-Bahadur|Vidyaranyapura|200,Bahadur,Vidyaranyapura main road ,vidyaranpura|4000|1000000000|Tiger|sale|
-Parthu Villa|Rt-Nagar|500,Parthu Villa,16th cross,Rt-Nagar|1200|6000000|Rachel|Resale|
