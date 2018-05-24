@@ -12,28 +12,28 @@ data2= pd.read_csv("datafile.csv")
 data3=pd.read_csv("houseShortage.csv")
 while(1):
 	print("Choose the parameters to visualize\n")
-	print(" 1-Bedrooms vs count based on current geo location\n 2-Price vs Latitude based on current geo location \n 3-Price vs Square Feet \n 4-Bedroom vs price based on current geo location\n 5-Price vs location( Based on postal code)\n 6-Know your scheme based on Gov. of India \n 7-State vs Estimated number of households in India\n 8-Housing 2012 (India)\n key board interrupt-exit\n")
-	vch=input("enter the choice")
-	if(vch=="1"):
+	print(" 1v-Bedrooms vs count based on current geo location\n 2v-Price vs Latitude based on current geo location \n 3v-Price vs Square Feet \n 4v-Bedroom vs price based on current geo location\n 5v-Price vs location( Based on postal code)\n 6v-Know your scheme based on Gov. of India \n 7v-State vs Estimated number of households in India\n 8v-Housing 2012 (India)\n key board interrupt-exit\n")
+	vch=raw_input("enter the choice\n")
+	if(vch=="1v"):
 		data['bedrooms'].value_counts().plot(kind='bar')
 		plt.title('number of Bedroom')
 		plt.xlabel('Bedrooms')
 		plt.ylabel('Count')
 		sns.despine
 		plt.show()
-	elif(vch=="2"):
+	elif(vch=="2v"):
 		plt.scatter(data.price,data.lat)
 		plt.xlabel("Price")
 		plt.ylabel('Latitude')
 		plt.title("Latitude vs Price")
 		plt.show()
 
-	elif(vch=="3"):
+	elif(vch=="3v"):
 		plt.scatter(data.price,data.sqft_living)
 		plt.title("Price vs Square Feet")
 		plt.show()
 
-	elif(vch=="4"):
+	elif(vch=="4v"):
 		plt.scatter(data.bedrooms,data.price)
 		plt.title("Bedroom and Price ")
 		plt.xlabel("Bedrooms")
@@ -42,16 +42,16 @@ while(1):
 		sns.despine
 		plt.show()
 
-	elif(vch=="5"):
+	elif(vch=="5v"):
 		plt.scatter(data.zipcode,data.price)
 		plt.title("Which is the pricey location by zipcode?")
 		plt.show()
 
-	elif(vch=="6"):
+	elif(vch=="6v"):
 		plt.scatter(data2.Started_in,data2.Name_of_the_Scheme)
 		plt.title("Housing schemes in India")
 		plt.show()
-	elif(vch=="7"):
+	elif(vch=="7v"):
 		N = data3.Name_State.count()
 		print(N)
 		ind = np.arange(N)
@@ -68,7 +68,7 @@ while(1):
 		plt.legend(loc='best')
 		plt.show()
 
-	elif(vch=="8"):
+	elif(vch=="8v"):
 		labels = data3.Name_State
 		sizes = data3.State_wise_Dist_Housing_shortage2012_inMllions
 		#explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')

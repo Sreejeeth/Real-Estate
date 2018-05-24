@@ -48,14 +48,14 @@ def unpack():
 print("\n**************************WELCOME TO ESTATE PORTAL***************************")
 print("\nENTER YOUR CHOICE")
 while True:
-    choice=input("1.Insert a record\n2.Search and Modify a record\n3.Delete record\n4.Visualize\n5.Exit\n")
-    if choice=='1':
-        estateName=input("Enter Estate Name\n")
-        estateAddress=input("Enter Estate Address\n")
-        estateSize=input("Enter Estate Size\n")
-        estatePrice=input("Enter Estate Price\n")
-        estateOwner=input("Enter Estate Owner\n")
-        estateCondition=input("Enter Estate Condition\n")
+    choice=raw_input("1.Insert a record\n2.Search and Modify a record\n3.Delete record\n4.Visualize\n5.Exit\n")
+    if choice=="1":
+        estateName=raw_input("Enter Estate Name\n")
+        estateAddress=raw_input("Enter Estate Address\n")
+        estateSize=raw_input("Enter Estate Size\n")
+        estatePrice=raw_input("Enter Estate Price\n")
+        estateOwner=raw_input("Enter Estate Owner\n")
+        estateCondition=raw_input("Enter Estate Condition\n")
         temp=estateDetails(estateName,estateAddress,estateSize,estatePrice,estateOwner,estateCondition)
         with open("fulldetails.txt","a+") as fp:
             temp.pack(fp)
@@ -83,7 +83,7 @@ while True:
         p=[]
         s=[]
         unpack()
-        name_srch=input("Enter the Name to search and modify\n")
+        name_srch=raw_input("Enter the Name to search and modify\n")
         flag=0
         with open("index.txt",'r') as fp2:
             for line in fp2:
@@ -94,21 +94,21 @@ while True:
                         if name_srch==x.estateName:
                             flag=1
                             print("Record found")
-                            ch=input("Select the field to modify\n1.Address\n2.Size\n3.Price\n4.Owner\n5.Condition\n")
-                            if ch=='1':
-                                newadd=input("Enter the new address\n")
+                            ch=raw_input("Select the field to modify\n1.Address\n2.Size\n3.Price\n4.Owner\n5.Condition\n")
+                            if ch=="1":
+                                newadd=raw_input("Enter the new address\n")
                                 x.estateAddress=newadd
-                            elif ch=='2':
-                                newsize=input("Enter the new size\n")
+                            elif ch=="2":
+                                newsize=raw_input("Enter the new size\n")
                                 x.estateSize=newsize
-                            elif ch=='3':
-                                newprice=input("Enter the new price\n")
+                            elif ch=="3":
+                                newprice=raw_input("Enter the new price\n")
                                 x.estatePrice=newprice
-                            elif ch=='4':
-                                newowner=input("Enter the new owner\n")
+                            elif ch=="4":
+                                newowner=raw_input("Enter the new owner\n")
                                 x.estateOwner=newowner
-                            elif ch=='5':
-                                newcond=input("Enter the new condition\n")
+                            elif ch=="5":
+                                newcond=raw_input("Enter the new condition\n")
                                 x.estateCondition=newcond
                             else:
                                 print("invalid option")
@@ -129,7 +129,7 @@ while True:
         s=[]
         p=[]
         unpack()
-        name_srch=input("Enter the Name of the house to be Deleted\n")
+        name_srch=raw_input("Enter the Name of the house to be Deleted\n")
         flag=0
         with open("index.txt",'r') as fp2:
             for line in fp2:
@@ -173,10 +173,10 @@ while True:
         #         x.pack(fp)
 
     elif choice=="4":
-        os.system('python mixvisualize.py')
+        os.system("python mixvisualize.py")
 
     elif choice=="5":
         exit()
 
     else :
-        print("Invalid Input")
+        print("Invalid raw_input")
