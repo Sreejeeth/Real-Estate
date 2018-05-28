@@ -1,3 +1,4 @@
-Heritage Estate|1002,12th block,Puttenhalli,Yelahanka ,Bangalore|1426|9000000|Mohan|Rent|
-N G Nilaya|16th cross, 5th main road , Malleswaram,Bangalore|1400|8000000|Nitesh|Resale|
-Mat house|4th cross, Matikere,Bangalore|1200|100000000|Fahad|Sale|
+Heritage Estate|1002,12th block,Puttenhalli,Yelahanka ,Bangalore|1426|9000000|Prashanth|Rent|
+Peenya house|10th cross,Peenya Main road,Peenya,Bangalore|3000|50000000|Anagha|Sale|
+Ncc urban|Doddaballapur Road,Puttenhalli,Yelahanka,Bangalore|4000|100000000|Aishwarya|Sale|
+Cresent Enclave|Gokula,Matikere,Bangalore|2000|1907809|Jenny|Rent|

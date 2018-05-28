@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
+#import seaborn as sns
 
 plt.rcParams['font.size'] = 9.0
 
@@ -13,13 +13,13 @@ data3=pd.read_csv("houseShortage.csv")
 while(1):
 	print("Choose the parameters to visualize\n")
 	print(" 1v-Bedrooms vs count based on current geo location\n 2v-Price vs Latitude based on current geo location \n 3v-Price vs Square Feet \n 4v-Bedroom vs price based on current geo location\n 5v-Price vs location( Based on postal code)\n 6v-Know your scheme based on Gov. of India \n 7v-State vs Estimated number of households in India\n 8v-Housing 2012 (India)\n key board interrupt-exit\n")
-	vch=raw_input("enter the choice\n")
+	vch=input("enter the choice\n")
 	if(vch=="1v"):
 		data['bedrooms'].value_counts().plot(kind='bar')
 		plt.title('number of Bedroom')
 		plt.xlabel('Bedrooms')
 		plt.ylabel('Count')
-		sns.despine
+		#sns.despine
 		plt.show()
 	elif(vch=="2v"):
 		plt.scatter(data.price,data.lat)
@@ -39,7 +39,7 @@ while(1):
 		plt.xlabel("Bedrooms")
 		plt.ylabel("Price")
 		plt.show()
-		sns.despine
+		# sns.despine
 		plt.show()
 
 	elif(vch=="5v"):
